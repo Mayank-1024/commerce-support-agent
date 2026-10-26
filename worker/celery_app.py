@@ -23,6 +23,10 @@ celery_app.conf.update(
     worker_prefetch_multiplier=1,
     task_serializer="json",
     accept_content=["json"],
+    # A turn spends most of its time waiting on the model API (I/O-bound), so threads
+    # fit better than processes. The default prefork pool also fails on macOS, where
+    # billiard starts children with "spawn" and the task tracer is never initialized.
+    worker_pool="threads",
 )
 
 

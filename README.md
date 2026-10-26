@@ -108,6 +108,18 @@ curl -s localhost:8000/healthz
 
 Other scenario messages to try are the `message:` fields in `evals/scenarios/*.yaml`, for example the prompt-injection one in `19_prompt_injection_return.yaml`.
 
+### With Redis and a real worker (local)
+
+Verified on macOS with Redis 8 from Homebrew: API and a separate Celery worker process, two messages handled concurrently by worker threads.
+
+```bash
+redis-server --port 6379                                  # terminal 1
+PYTHONPATH=. uv run celery -A worker.celery_app worker --loglevel=INFO --concurrency=4   # terminal 2
+uv run uvicorn api.main:app --port 8000                   # terminal 3
+```
+
+`PYTHONPATH=.` matters: the `celery` command only puts the project folder on the import path while it loads the app, so imports made later inside a task (the offline scripted model loads `evals/`) would fail without it. The worker uses Celery's thread pool (`worker_pool="threads"`): a turn mostly waits on the model API, and the default prefork pool fails on macOS, where child processes start with `spawn`.
+
 ### With Redis and a real worker (Docker Compose)
 
 ```bash
@@ -194,7 +206,7 @@ settings.py     environment configuration
 
 ## How this was built
 
-Built by Mayank Bhadrasen with Claude Code as a pair programmer. Mayank set the design (what is deterministic versus model-driven, the guardrails, the eval scenarios) and reviewed and ran every change; the commit history carries the co-author line.
+Built by Mayank Bhadrasen with Claude Code (Anthropic's coding agent), which wrote most of the code from Mayank's brief: what stays deterministic versus model-driven, the guardrails, and the eval scenarios. The commits carry a co-author line for it.
 
 ## License
 
