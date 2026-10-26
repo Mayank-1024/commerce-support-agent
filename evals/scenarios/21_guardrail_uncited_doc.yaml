@@ -1,0 +1,25 @@
+id: guardrail_ungrounded_citation
+category: guardrail
+scripted_only: true
+description: >
+  The model cites an article it never retrieved. Grounding check rejects it,
+  the model retries with a grounded answer.
+message: "Do you ship to Canada?"
+script:
+  - final:
+      reply: "No, we only ship within the US."
+      cited_doc_ids: [shipping]
+      actions: []
+      escalated: false
+  - tool_calls:
+      - name: search_help_center
+        input: {query: "ship international countries"}
+  - final:
+      reply: "Not yet. We ship to all 50 US states and APO/FPO addresses, but not internationally."
+      cited_doc_ids: [shipping]
+      actions: []
+      escalated: false
+expect:
+  must_cite: [shipping]
+  output_retries: 1
+  fallback: none

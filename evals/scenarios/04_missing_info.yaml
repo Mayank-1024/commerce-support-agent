@@ -1,0 +1,15 @@
+id: missing_info_asks_for_details
+category: missing_info
+description: No order number or email; the agent must ask for them instead of guessing.
+message: "Where is my package??"
+script:
+  - final:
+      reply: "I can help with that. Please send me your order number (it starts with ORD-) and the email address you used at checkout."
+      cited_doc_ids: []
+      actions: []
+      escalated: false
+expect:
+  forbidden_tools: [lookup_order, request_return]
+  must_escalate: false
+  reply_contains_any: [order number, email]
+  fallback: none

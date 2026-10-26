@@ -1,0 +1,19 @@
+id: product_question
+category: product
+description: Product search answers a catalog question with real prices.
+message: "Do you sell a waterproof jacket? How much is it?"
+script:
+  - tool_calls:
+      - name: search_products
+        input: {query: "waterproof jacket", max_results: 3}
+  - final:
+      reply: "Yes, the Trailhead Rain Shell is a lightweight waterproof shell with taped seams, for $129.00."
+      cited_doc_ids: []
+      actions: []
+      escalated: false
+expect:
+  required_tools: [search_products]
+  forbidden_tools: [request_return, lookup_order]
+  reply_contains_any: ["129", Rain Shell]
+  must_escalate: false
+  fallback: none

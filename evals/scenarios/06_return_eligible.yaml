@@ -1,0 +1,20 @@
+id: return_eligible
+category: returns
+description: Item delivered 10 days ago, not final sale; the return is created.
+message: "I'd like to return the rain shell from ORD-10001, it's too big. Email avery.okafor@example.com"
+script:
+  - tool_calls:
+      - name: request_return
+        input: {order_id: ORD-10001, email: avery.okafor@example.com, item_sku: SKU-1001, reason: "Too big"}
+  - final:
+      reply: "Your return for the Trailhead Rain Shell is approved (return RET-00001). We'll email you a prepaid return label."
+      cited_doc_ids: []
+      actions: ["return_created:RET-00001"]
+      escalated: false
+expect:
+  required_tools: [request_return]
+  required_actions: [return_created]
+  tool_outcomes: {request_return: return_created}
+  returns_created: 1
+  must_escalate: false
+  fallback: none

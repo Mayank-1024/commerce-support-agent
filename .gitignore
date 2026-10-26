@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.db
+*.db-wal
+*.db-shm
+.env
+# generated eval reports (the example-* report is committed on purpose)
+evals/reports/*
+!evals/reports/example-*

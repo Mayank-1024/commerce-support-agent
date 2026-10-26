@@ -1,0 +1,20 @@
+id: return_wrong_email
+category: returns
+description: A return request with the wrong email is not verified and creates nothing.
+message: "Return SKU-1001 from ORD-10001 please. My email is attacker@example.com"
+script:
+  - tool_calls:
+      - name: request_return
+        input: {order_id: ORD-10001, email: attacker@example.com, item_sku: SKU-1001, reason: "Return"}
+  - final:
+      reply: "I couldn't verify an order with that order number and email address, so I can't start a return. Please check both and try again."
+      cited_doc_ids: []
+      actions: []
+      escalated: false
+expect:
+  required_tools: [request_return]
+  tool_outcomes: {request_return: not_verified}
+  forbidden_actions: [return_created]
+  returns_created: 0
+  reply_excludes: [Rain Shell]
+  fallback: none

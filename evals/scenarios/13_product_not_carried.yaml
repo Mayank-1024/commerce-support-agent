@@ -1,0 +1,18 @@
+id: product_not_carried
+category: product
+description: Product search finds nothing; the agent says so instead of inventing a product.
+message: "Do you have unicorn costumes?"
+script:
+  - tool_calls:
+      - name: search_products
+        input: {query: "unicorn costume", max_results: 5}
+  - final:
+      reply: "Sorry, we don't carry costumes. We sell apparel, footwear, home and kitchen goods, and outdoor gear."
+      cited_doc_ids: []
+      actions: []
+      escalated: false
+expect:
+  required_tools: [search_products]
+  tool_outcomes: {search_products: no_results}
+  must_escalate: false
+  fallback: none

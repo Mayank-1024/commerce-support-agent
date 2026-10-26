@@ -1,0 +1,24 @@
+id: missing_info_followup_with_history
+category: missing_info
+description: Second turn of a conversation; the shopper supplies the details asked for earlier.
+history:
+  - role: shopper
+    text: "Has my order arrived yet?"
+  - role: agent
+    text: "I can check. What is your order number and the email you used at checkout?"
+message: "It's ORD-10005 and morgan.castillo@example.com"
+script:
+  - tool_calls:
+      - name: lookup_order
+        input: {order_id: ORD-10005, email: morgan.castillo@example.com}
+  - final:
+      reply: "Thanks! Order ORD-10005 is still processing and hasn't shipped yet. You'll get a tracking number by email when it ships."
+      cited_doc_ids: []
+      actions: []
+      escalated: false
+expect:
+  required_tools: [lookup_order]
+  tool_outcomes: {lookup_order: ok}
+  reply_contains_any: [processing]
+  must_escalate: false
+  fallback: none

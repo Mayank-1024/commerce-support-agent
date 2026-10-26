@@ -1,0 +1,312 @@
+[
+  {
+    "sku": "SKU-1001",
+    "name": "Trailhead Rain Shell",
+    "category": "outerwear",
+    "price": 129.0,
+    "final_sale": false,
+    "attributes": {
+      "sizes": "XS-XXL",
+      "color": "slate",
+      "waterproof": "yes"
+    },
+    "description": "Lightweight waterproof shell with taped seams and a packable hood."
+  },
+  {
+    "sku": "SKU-1002",
+    "name": "Harbor Wool Peacoat",
+    "category": "outerwear",
+    "price": 219.0,
+    "final_sale": false,
+    "attributes": {
+      "sizes": "XS-XL",
+      "color": "navy",
+      "material": "80% wool"
+    },
+    "description": "Double-breasted wool coat with a quilted lining for cold commutes."
+  },
+  {
+    "sku": "SKU-1003",
+    "name": "Ridge Fleece Pullover",
+    "category": "outerwear",
+    "price": 69.0,
+    "final_sale": false,
+    "attributes": {
+      "sizes": "S-XXL",
+      "color": "moss",
+      "material": "recycled polyester"
+    },
+    "description": "Midweight fleece with a half zip, good for layering."
+  },
+  {
+    "sku": "SKU-1004",
+    "name": "Everyday Cotton Tee",
+    "category": "tops",
+    "price": 22.0,
+    "final_sale": false,
+    "attributes": {
+      "sizes": "XS-XXL",
+      "color": "white",
+      "material": "organic cotton"
+    },
+    "description": "Soft crew-neck tee in organic cotton. Preshrunk."
+  },
+  {
+    "sku": "SKU-1005",
+    "name": "Linen Camp Shirt",
+    "category": "tops",
+    "price": 58.0,
+    "final_sale": false,
+    "attributes": {
+      "sizes": "S-XL",
+      "color": "sand",
+      "material": "linen"
+    },
+    "description": "Breathable short-sleeve linen shirt with a relaxed fit."
+  },
+  {
+    "sku": "SKU-1006",
+    "name": "Merino Crew Sweater",
+    "category": "tops",
+    "price": 98.0,
+    "final_sale": false,
+    "attributes": {
+      "sizes": "XS-XL",
+      "color": "charcoal",
+      "material": "merino wool"
+    },
+    "description": "Fine-gauge merino sweater that resists odor and itch."
+  },
+  {
+    "sku": "SKU-1007",
+    "name": "Stretch Chino Pant",
+    "category": "bottoms",
+    "price": 64.0,
+    "final_sale": false,
+    "attributes": {
+      "waist": "28-40",
+      "color": "khaki",
+      "fit": "slim"
+    },
+    "description": "Chinos with a little stretch for all-day comfort."
+  },
+  {
+    "sku": "SKU-1008",
+    "name": "Selvedge Denim Jean",
+    "category": "bottoms",
+    "price": 110.0,
+    "final_sale": false,
+    "attributes": {
+      "waist": "28-38",
+      "color": "indigo",
+      "fit": "straight"
+    },
+    "description": "Raw selvedge denim that fades with wear."
+  },
+  {
+    "sku": "SKU-1009",
+    "name": "Trail Running Short",
+    "category": "bottoms",
+    "price": 38.0,
+    "final_sale": false,
+    "attributes": {
+      "sizes": "S-XL",
+      "color": "black",
+      "inseam": "5 inch"
+    },
+    "description": "Quick-dry running short with a zip pocket."
+  },
+  {
+    "sku": "SKU-1010",
+    "name": "Canvas Low Sneaker",
+    "category": "footwear",
+    "price": 75.0,
+    "final_sale": false,
+    "attributes": {
+      "sizes": "5-13",
+      "color": "off-white"
+    },
+    "description": "Classic canvas sneaker with a vulcanized rubber sole."
+  },
+  {
+    "sku": "SKU-1011",
+    "name": "Waterproof Hiking Boot",
+    "category": "footwear",
+    "price": 165.0,
+    "final_sale": false,
+    "attributes": {
+      "sizes": "6-14",
+      "color": "brown",
+      "waterproof": "yes"
+    },
+    "description": "Mid-height hiking boot with a waterproof membrane and lugged sole."
+  },
+  {
+    "sku": "SKU-1012",
+    "name": "Sample Sale Loafer",
+    "category": "footwear",
+    "price": 49.0,
+    "final_sale": true,
+    "attributes": {
+      "sizes": "7-12",
+      "color": "tan"
+    },
+    "description": "Leather penny loafer from a past season. Final sale."
+  },
+  {
+    "sku": "SKU-1013",
+    "name": "Cast Iron Skillet 10in",
+    "category": "kitchen",
+    "price": 42.0,
+    "final_sale": false,
+    "attributes": {
+      "diameter": "10 inch",
+      "preseasoned": "yes"
+    },
+    "description": "Preseasoned cast iron skillet for stovetop and oven."
+  },
+  {
+    "sku": "SKU-1014",
+    "name": "Pour-Over Coffee Set",
+    "category": "kitchen",
+    "price": 36.0,
+    "final_sale": false,
+    "attributes": {
+      "capacity": "600 ml",
+      "material": "borosilicate glass"
+    },
+    "description": "Glass dripper, carafe and 40 paper filters."
+  },
+  {
+    "sku": "SKU-1015",
+    "name": "Chef Knife 8in",
+    "category": "kitchen",
+    "price": 89.0,
+    "final_sale": false,
+    "attributes": {
+      "blade": "8 inch",
+      "steel": "German stainless"
+    },
+    "description": "Full-tang chef knife with a forged stainless blade."
+  },
+  {
+    "sku": "SKU-1016",
+    "name": "Stoneware Dinner Plates (set of 4)",
+    "category": "kitchen",
+    "price": 54.0,
+    "final_sale": false,
+    "attributes": {
+      "pieces": "4",
+      "dishwasher_safe": "yes"
+    },
+    "description": "Reactive-glaze stoneware plates, microwave and dishwasher safe."
+  },
+  {
+    "sku": "SKU-1017",
+    "name": "Linen Duvet Cover Queen",
+    "category": "home",
+    "price": 149.0,
+    "final_sale": false,
+    "attributes": {
+      "size": "queen",
+      "material": "stonewashed linen"
+    },
+    "description": "Stonewashed linen duvet cover with a button closure."
+  },
+  {
+    "sku": "SKU-1018",
+    "name": "Wool Throw Blanket",
+    "category": "home",
+    "price": 79.0,
+    "final_sale": false,
+    "attributes": {
+      "dimensions": "50x60 inch",
+      "material": "lambswool"
+    },
+    "description": "Woven lambswool throw with fringed edges."
+  },
+  {
+    "sku": "SKU-1019",
+    "name": "Clearance Ceramic Vase",
+    "category": "home",
+    "price": 18.0,
+    "final_sale": true,
+    "attributes": {
+      "height": "9 inch",
+      "color": "speckled white"
+    },
+    "description": "Hand-thrown ceramic vase. Clearance item, final sale."
+  },
+  {
+    "sku": "SKU-1020",
+    "name": "Soy Candle Cedar",
+    "category": "home",
+    "price": 24.0,
+    "final_sale": true,
+    "attributes": {
+      "burn_time": "45 hours",
+      "scent": "cedar and sage"
+    },
+    "description": "Hand-poured soy candle. For hygiene reasons candles are final sale."
+  },
+  {
+    "sku": "SKU-1021",
+    "name": "Insulated Water Bottle 32oz",
+    "category": "outdoor",
+    "price": 34.0,
+    "final_sale": false,
+    "attributes": {
+      "capacity": "32 oz",
+      "keeps_cold": "24 hours"
+    },
+    "description": "Double-wall stainless bottle that keeps drinks cold for 24 hours."
+  },
+  {
+    "sku": "SKU-1022",
+    "name": "Two-Person Backpacking Tent",
+    "category": "outdoor",
+    "price": 289.0,
+    "final_sale": false,
+    "attributes": {
+      "capacity": "2 person",
+      "weight": "3.4 lb",
+      "season": "3-season"
+    },
+    "description": "Freestanding three-season tent with two doors and vestibules."
+  },
+  {
+    "sku": "SKU-1023",
+    "name": "Down Sleeping Bag 20F",
+    "category": "outdoor",
+    "price": 239.0,
+    "final_sale": false,
+    "attributes": {
+      "rating": "20F",
+      "fill": "650 fill down"
+    },
+    "description": "Mummy-shape down bag rated to 20 degrees Fahrenheit."
+  },
+  {
+    "sku": "SKU-1024",
+    "name": "Leather Card Wallet",
+    "category": "accessories",
+    "price": 45.0,
+    "final_sale": false,
+    "attributes": {
+      "slots": "4",
+      "material": "full-grain leather"
+    },
+    "description": "Slim card wallet in full-grain leather."
+  },
+  {
+    "sku": "SKU-1025",
+    "name": "Gift Card $50",
+    "category": "accessories",
+    "price": 50.0,
+    "final_sale": true,
+    "attributes": {
+      "delivery": "email"
+    },
+    "description": "Digital gift card delivered by email. Gift cards are non-returnable."
+  }
+]

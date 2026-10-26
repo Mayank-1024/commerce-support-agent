@@ -1,0 +1,20 @@
+id: return_ineligible_not_delivered
+category: returns
+description: The tent has shipped but not arrived; a return cannot start yet.
+message: "I want to return the tent in ORD-10004 (SKU-1022). casey.tanaka@example.com"
+script:
+  - tool_calls:
+      - name: request_return
+        input: {order_id: ORD-10004, email: casey.tanaka@example.com, item_sku: SKU-1022, reason: "No longer needed"}
+  - final:
+      reply: "Your tent hasn't been delivered yet, and returns can only be started after delivery. Once it arrives you'll have 30 days to return it."
+      cited_doc_ids: []
+      actions: []
+      escalated: false
+expect:
+  required_tools: [request_return]
+  forbidden_actions: [return_created]
+  tool_outcomes: {request_return: "ineligible:not_delivered"}
+  returns_created: 0
+  reply_contains_any: [delivered, arrive]
+  fallback: none

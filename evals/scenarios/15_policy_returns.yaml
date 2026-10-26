@@ -1,0 +1,19 @@
+id: policy_returns_cites_doc
+category: policy
+description: General returns-policy question with a required citation.
+message: "What's your return policy? Can I return a gift card?"
+script:
+  - tool_calls:
+      - name: search_help_center
+        input: {query: "return policy gift card final sale"}
+  - final:
+      reply: "Most items can be returned within 30 days of delivery if unworn with tags. Gift cards are final sale, so they can't be returned."
+      cited_doc_ids: [returns-policy]
+      actions: []
+      escalated: false
+expect:
+  required_tools: [search_help_center]
+  forbidden_tools: [request_return]
+  must_cite: [returns-policy]
+  reply_contains_any: ["30 days", final sale]
+  fallback: none

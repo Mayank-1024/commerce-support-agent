@@ -1,0 +1,687 @@
+[
+  {
+    "order_id": "ORD-10001",
+    "email": "avery.okafor@example.com",
+    "status": "delivered",
+    "order_date": "2026-09-29",
+    "delivered_date": "2026-10-05",
+    "tracking_number": "TRK10001US",
+    "items": [
+      {
+        "sku": "SKU-1001",
+        "name": "Trailhead Rain Shell",
+        "quantity": 1,
+        "unit_price": 129.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1004",
+        "name": "Everyday Cotton Tee",
+        "quantity": 1,
+        "unit_price": 22.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10002",
+    "email": "jordan.lindqvist@example.com",
+    "status": "delivered",
+    "order_date": "2026-08-26",
+    "delivered_date": "2026-08-31",
+    "tracking_number": "TRK10002US",
+    "items": [
+      {
+        "sku": "SKU-1011",
+        "name": "Waterproof Hiking Boot",
+        "quantity": 1,
+        "unit_price": 165.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10003",
+    "email": "riley.moreau@example.com",
+    "status": "delivered",
+    "order_date": "2026-10-06",
+    "delivered_date": "2026-10-10",
+    "tracking_number": "TRK10003US",
+    "items": [
+      {
+        "sku": "SKU-1012",
+        "name": "Sample Sale Loafer",
+        "quantity": 1,
+        "unit_price": 49.0,
+        "final_sale": true
+      },
+      {
+        "sku": "SKU-1007",
+        "name": "Stretch Chino Pant",
+        "quantity": 1,
+        "unit_price": 64.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10004",
+    "email": "casey.tanaka@example.com",
+    "status": "shipped",
+    "order_date": "2026-10-12",
+    "delivered_date": null,
+    "tracking_number": "TRK10004US",
+    "items": [
+      {
+        "sku": "SKU-1022",
+        "name": "Two-Person Backpacking Tent",
+        "quantity": 1,
+        "unit_price": 289.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10005",
+    "email": "morgan.castillo@example.com",
+    "status": "processing",
+    "order_date": "2026-10-14",
+    "delivered_date": null,
+    "tracking_number": null,
+    "items": [
+      {
+        "sku": "SKU-1015",
+        "name": "Chef Knife 8in",
+        "quantity": 1,
+        "unit_price": 89.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1014",
+        "name": "Pour-Over Coffee Set",
+        "quantity": 1,
+        "unit_price": 36.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10006",
+    "email": "quinn.novak@example.com",
+    "status": "delivered",
+    "order_date": "2026-09-11",
+    "delivered_date": "2026-09-15",
+    "tracking_number": "TRK10006US",
+    "items": [
+      {
+        "sku": "SKU-1006",
+        "name": "Merino Crew Sweater",
+        "quantity": 1,
+        "unit_price": 98.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10007",
+    "email": "rowan.haddad@example.com",
+    "status": "delivered",
+    "order_date": "2026-09-10",
+    "delivered_date": "2026-09-14",
+    "tracking_number": "TRK10007US",
+    "items": [
+      {
+        "sku": "SKU-1018",
+        "name": "Wool Throw Blanket",
+        "quantity": 1,
+        "unit_price": 79.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10008",
+    "email": "sage.brennan@example.com",
+    "status": "cancelled",
+    "order_date": "2026-10-03",
+    "delivered_date": null,
+    "tracking_number": null,
+    "items": [
+      {
+        "sku": "SKU-1023",
+        "name": "Down Sleeping Bag 20F",
+        "quantity": 1,
+        "unit_price": 239.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10009",
+    "email": "parker.lindqvist4@example.com",
+    "status": "delivered",
+    "order_date": "2026-09-30",
+    "delivered_date": "2026-10-04",
+    "tracking_number": "TRK10009US",
+    "items": [
+      {
+        "sku": "SKU-1009",
+        "name": "Trail Running Short",
+        "quantity": 1,
+        "unit_price": 38.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1008",
+        "name": "Selvedge Denim Jean",
+        "quantity": 1,
+        "unit_price": 110.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1005",
+        "name": "Linen Camp Shirt",
+        "quantity": 1,
+        "unit_price": 58.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10010",
+    "email": "jordan.iyer55@example.com",
+    "status": "delivered",
+    "order_date": "2026-10-02",
+    "delivered_date": "2026-10-06",
+    "tracking_number": "TRK10010US",
+    "items": [
+      {
+        "sku": "SKU-1001",
+        "name": "Trailhead Rain Shell",
+        "quantity": 1,
+        "unit_price": 129.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10011",
+    "email": "hayden.okafor72@example.com",
+    "status": "shipped",
+    "order_date": "2026-10-10",
+    "delivered_date": null,
+    "tracking_number": "TRK10011US",
+    "items": [
+      {
+        "sku": "SKU-1023",
+        "name": "Down Sleeping Bag 20F",
+        "quantity": 1,
+        "unit_price": 239.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10012",
+    "email": "casey.brennan76@example.com",
+    "status": "delivered",
+    "order_date": "2026-09-23",
+    "delivered_date": "2026-09-26",
+    "tracking_number": "TRK10012US",
+    "items": [
+      {
+        "sku": "SKU-1001",
+        "name": "Trailhead Rain Shell",
+        "quantity": 1,
+        "unit_price": 129.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1025",
+        "name": "Gift Card $50",
+        "quantity": 1,
+        "unit_price": 50.0,
+        "final_sale": true
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10013",
+    "email": "morgan.moreau28@example.com",
+    "status": "delivered",
+    "order_date": "2026-08-26",
+    "delivered_date": "2026-08-29",
+    "tracking_number": "TRK10013US",
+    "items": [
+      {
+        "sku": "SKU-1004",
+        "name": "Everyday Cotton Tee",
+        "quantity": 1,
+        "unit_price": 22.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1003",
+        "name": "Ridge Fleece Pullover",
+        "quantity": 1,
+        "unit_price": 69.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10014",
+    "email": "hayden.castillo6@example.com",
+    "status": "delivered",
+    "order_date": "2026-08-26",
+    "delivered_date": "2026-08-29",
+    "tracking_number": "TRK10014US",
+    "items": [
+      {
+        "sku": "SKU-1015",
+        "name": "Chef Knife 8in",
+        "quantity": 1,
+        "unit_price": 89.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1018",
+        "name": "Wool Throw Blanket",
+        "quantity": 1,
+        "unit_price": 79.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1004",
+        "name": "Everyday Cotton Tee",
+        "quantity": 1,
+        "unit_price": 22.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10015",
+    "email": "dakota.ferreira80@example.com",
+    "status": "delivered",
+    "order_date": "2026-10-05",
+    "delivered_date": "2026-10-07",
+    "tracking_number": "TRK10015US",
+    "items": [
+      {
+        "sku": "SKU-1019",
+        "name": "Clearance Ceramic Vase",
+        "quantity": 1,
+        "unit_price": 18.0,
+        "final_sale": true
+      },
+      {
+        "sku": "SKU-1007",
+        "name": "Stretch Chino Pant",
+        "quantity": 1,
+        "unit_price": 64.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10016",
+    "email": "skyler.castillo11@example.com",
+    "status": "delivered",
+    "order_date": "2026-08-26",
+    "delivered_date": "2026-08-30",
+    "tracking_number": "TRK10016US",
+    "items": [
+      {
+        "sku": "SKU-1004",
+        "name": "Everyday Cotton Tee",
+        "quantity": 1,
+        "unit_price": 22.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10017",
+    "email": "dakota.novak21@example.com",
+    "status": "delivered",
+    "order_date": "2026-07-20",
+    "delivered_date": "2026-07-24",
+    "tracking_number": "TRK10017US",
+    "items": [
+      {
+        "sku": "SKU-1012",
+        "name": "Sample Sale Loafer",
+        "quantity": 1,
+        "unit_price": 49.0,
+        "final_sale": true
+      },
+      {
+        "sku": "SKU-1007",
+        "name": "Stretch Chino Pant",
+        "quantity": 1,
+        "unit_price": 64.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10018",
+    "email": "parker.lindqvist78@example.com",
+    "status": "delivered",
+    "order_date": "2026-09-12",
+    "delivered_date": "2026-09-15",
+    "tracking_number": "TRK10018US",
+    "items": [
+      {
+        "sku": "SKU-1006",
+        "name": "Merino Crew Sweater",
+        "quantity": 1,
+        "unit_price": 98.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1018",
+        "name": "Wool Throw Blanket",
+        "quantity": 1,
+        "unit_price": 79.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1024",
+        "name": "Leather Card Wallet",
+        "quantity": 1,
+        "unit_price": 45.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10019",
+    "email": "morgan.duarte82@example.com",
+    "status": "shipped",
+    "order_date": "2026-10-13",
+    "delivered_date": null,
+    "tracking_number": "TRK10019US",
+    "items": [
+      {
+        "sku": "SKU-1018",
+        "name": "Wool Throw Blanket",
+        "quantity": 1,
+        "unit_price": 79.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1008",
+        "name": "Selvedge Denim Jean",
+        "quantity": 1,
+        "unit_price": 110.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1022",
+        "name": "Two-Person Backpacking Tent",
+        "quantity": 1,
+        "unit_price": 289.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10020",
+    "email": "casey.varga5@example.com",
+    "status": "delivered",
+    "order_date": "2026-10-05",
+    "delivered_date": "2026-10-09",
+    "tracking_number": "TRK10020US",
+    "items": [
+      {
+        "sku": "SKU-1013",
+        "name": "Cast Iron Skillet 10in",
+        "quantity": 1,
+        "unit_price": 42.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1009",
+        "name": "Trail Running Short",
+        "quantity": 1,
+        "unit_price": 38.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10021",
+    "email": "finley.nakamura41@example.com",
+    "status": "delivered",
+    "order_date": "2026-08-11",
+    "delivered_date": "2026-08-15",
+    "tracking_number": "TRK10021US",
+    "items": [
+      {
+        "sku": "SKU-1021",
+        "name": "Insulated Water Bottle 32oz",
+        "quantity": 1,
+        "unit_price": 34.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10022",
+    "email": "sage.moreau34@example.com",
+    "status": "delivered",
+    "order_date": "2026-08-03",
+    "delivered_date": "2026-08-07",
+    "tracking_number": "TRK10022US",
+    "items": [
+      {
+        "sku": "SKU-1008",
+        "name": "Selvedge Denim Jean",
+        "quantity": 1,
+        "unit_price": 110.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10023",
+    "email": "hayden.haddad75@example.com",
+    "status": "delivered",
+    "order_date": "2026-09-26",
+    "delivered_date": "2026-09-28",
+    "tracking_number": "TRK10023US",
+    "items": [
+      {
+        "sku": "SKU-1012",
+        "name": "Sample Sale Loafer",
+        "quantity": 1,
+        "unit_price": 49.0,
+        "final_sale": true
+      },
+      {
+        "sku": "SKU-1008",
+        "name": "Selvedge Denim Jean",
+        "quantity": 1,
+        "unit_price": 110.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10024",
+    "email": "skyler.okafor15@example.com",
+    "status": "shipped",
+    "order_date": "2026-10-10",
+    "delivered_date": null,
+    "tracking_number": "TRK10024US",
+    "items": [
+      {
+        "sku": "SKU-1021",
+        "name": "Insulated Water Bottle 32oz",
+        "quantity": 1,
+        "unit_price": 34.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10025",
+    "email": "hayden.lindqvist50@example.com",
+    "status": "delivered",
+    "order_date": "2026-08-07",
+    "delivered_date": "2026-08-11",
+    "tracking_number": "TRK10025US",
+    "items": [
+      {
+        "sku": "SKU-1020",
+        "name": "Soy Candle Cedar",
+        "quantity": 1,
+        "unit_price": 24.0,
+        "final_sale": true
+      },
+      {
+        "sku": "SKU-1015",
+        "name": "Chef Knife 8in",
+        "quantity": 1,
+        "unit_price": 89.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10026",
+    "email": "dakota.okafor88@example.com",
+    "status": "shipped",
+    "order_date": "2026-10-11",
+    "delivered_date": null,
+    "tracking_number": "TRK10026US",
+    "items": [
+      {
+        "sku": "SKU-1004",
+        "name": "Everyday Cotton Tee",
+        "quantity": 1,
+        "unit_price": 22.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1022",
+        "name": "Two-Person Backpacking Tent",
+        "quantity": 1,
+        "unit_price": 289.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1018",
+        "name": "Wool Throw Blanket",
+        "quantity": 1,
+        "unit_price": 79.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10027",
+    "email": "jordan.castillo56@example.com",
+    "status": "processing",
+    "order_date": "2026-10-14",
+    "delivered_date": null,
+    "tracking_number": null,
+    "items": [
+      {
+        "sku": "SKU-1015",
+        "name": "Chef Knife 8in",
+        "quantity": 1,
+        "unit_price": 89.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10028",
+    "email": "finley.nakamura34@example.com",
+    "status": "shipped",
+    "order_date": "2026-10-11",
+    "delivered_date": null,
+    "tracking_number": "TRK10028US",
+    "items": [
+      {
+        "sku": "SKU-1025",
+        "name": "Gift Card $50",
+        "quantity": 1,
+        "unit_price": 50.0,
+        "final_sale": true
+      },
+      {
+        "sku": "SKU-1006",
+        "name": "Merino Crew Sweater",
+        "quantity": 1,
+        "unit_price": 98.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1017",
+        "name": "Linen Duvet Cover Queen",
+        "quantity": 1,
+        "unit_price": 149.0,
+        "final_sale": false
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10029",
+    "email": "dakota.ferreira65@example.com",
+    "status": "delivered",
+    "order_date": "2026-09-23",
+    "delivered_date": "2026-09-27",
+    "tracking_number": "TRK10029US",
+    "items": [
+      {
+        "sku": "SKU-1007",
+        "name": "Stretch Chino Pant",
+        "quantity": 1,
+        "unit_price": 64.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1005",
+        "name": "Linen Camp Shirt",
+        "quantity": 1,
+        "unit_price": 58.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1012",
+        "name": "Sample Sale Loafer",
+        "quantity": 1,
+        "unit_price": 49.0,
+        "final_sale": true
+      }
+    ]
+  },
+  {
+    "order_id": "ORD-10030",
+    "email": "finley.okafor77@example.com",
+    "status": "processing",
+    "order_date": "2026-10-14",
+    "delivered_date": null,
+    "tracking_number": null,
+    "items": [
+      {
+        "sku": "SKU-1016",
+        "name": "Stoneware Dinner Plates (set of 4)",
+        "quantity": 1,
+        "unit_price": 54.0,
+        "final_sale": false
+      },
+      {
+        "sku": "SKU-1001",
+        "name": "Trailhead Rain Shell",
+        "quantity": 1,
+        "unit_price": 129.0,
+        "final_sale": false
+      }
+    ]
+  }
+]

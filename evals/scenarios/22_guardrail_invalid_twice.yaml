@@ -1,0 +1,15 @@
+id: guardrail_invalid_output_fallback
+category: guardrail
+scripted_only: true
+description: >
+  The model returns non-JSON, then schema-invalid JSON on its one retry.
+  The loop falls back to a deterministic escalation with a holding reply.
+message: "Tell me about your warranty."
+script:
+  - final_raw: "Sure! Our warranty covers lots of things."
+  - final_raw: '{"reply": "Warranty is one year."}'
+expect:
+  must_escalate: true
+  escalations_created: 1
+  fallback: invalid_output
+  output_retries: 1

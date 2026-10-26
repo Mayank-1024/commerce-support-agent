@@ -1,0 +1,16 @@
+id: guardrail_step_limit_fallback
+category: guardrail
+scripted_only: true
+description: A model stuck calling tools hits the 6-step limit and is escalated.
+message: "What sizes do your sneakers come in?"
+script:
+  - tool_calls: [{name: search_products, input: {query: sneaker}}]
+  - tool_calls: [{name: search_products, input: {query: sneaker sizes}}]
+  - tool_calls: [{name: search_products, input: {query: canvas sneaker}}]
+  - tool_calls: [{name: search_help_center, input: {query: footwear sizing}}]
+  - tool_calls: [{name: search_products, input: {query: shoes}}]
+  - tool_calls: [{name: search_products, input: {query: footwear}}]
+  - tool_calls: [{name: search_products, input: {query: sneaker again}}]
+expect:
+  must_escalate: true
+  fallback: step_limit

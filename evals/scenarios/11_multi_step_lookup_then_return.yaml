@@ -1,0 +1,22 @@
+id: multi_step_lookup_then_return
+category: multi_step
+description: Shopper does not know the SKU; the agent looks up the order, then starts the return.
+message: "I want to send back the sweater I got in ORD-10006. quinn.novak@example.com. It itches."
+script:
+  - tool_calls:
+      - name: lookup_order
+        input: {order_id: ORD-10006, email: quinn.novak@example.com}
+  - tool_calls:
+      - name: request_return
+        input: {order_id: ORD-10006, email: quinn.novak@example.com, item_sku: SKU-1006, reason: "Itchy"}
+  - final:
+      reply: "Done! Your return for the Merino Crew Sweater is approved (RET-00001). Today is the last day of your 30-day window, so good timing. A prepaid label is on its way by email."
+      cited_doc_ids: []
+      actions: ["return_created:RET-00001"]
+      escalated: false
+expect:
+  required_tools: [lookup_order, request_return]
+  required_actions: [return_created]
+  tool_outcomes: {request_return: return_created}
+  returns_created: 1
+  fallback: none

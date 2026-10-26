@@ -1,0 +1,13 @@
+id: guardrail_retries_exhausted_fallback
+category: guardrail
+scripted_only: true
+description: The model API stays down for every attempt; the turn ends in the escalation fallback.
+message: "Is the cast iron skillet preseasoned?"
+script:
+  - error: transient
+  - error: transient
+  - error: transient
+expect:
+  must_escalate: true
+  fallback: model_unavailable
+  api_retries: 2

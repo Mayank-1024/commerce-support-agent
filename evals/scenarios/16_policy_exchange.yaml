@@ -1,0 +1,17 @@
+id: policy_exchange_cites_doc
+category: policy
+description: Exchange question; must cite the exchanges article.
+message: "Can I exchange my shirt for a different size?"
+script:
+  - tool_calls:
+      - name: search_help_center
+        input: {query: "exchange different size"}
+  - final:
+      reply: "Yes. Exchanges follow the 30-day return window. The fastest way is to return the original and place a new order for the size you want; we cover return shipping on size exchanges."
+      cited_doc_ids: [exchanges]
+      actions: []
+      escalated: false
+expect:
+  required_tools: [search_help_center]
+  must_cite: [exchanges]
+  fallback: none

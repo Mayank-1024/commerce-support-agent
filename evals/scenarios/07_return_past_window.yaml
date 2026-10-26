@@ -1,0 +1,25 @@
+id: return_ineligible_past_window
+category: returns
+description: >
+  Boots delivered 45 days ago. The rules reject the return; the agent explains
+  using the returns policy and cites it.
+message: "I want to return my hiking boots from order ORD-10002. jordan.lindqvist@example.com"
+script:
+  - tool_calls:
+      - name: request_return
+        input: {order_id: ORD-10002, email: jordan.lindqvist@example.com, item_sku: SKU-1011, reason: "Changed my mind"}
+      - name: search_help_center
+        input: {query: "return window days"}
+  - final:
+      reply: "I'm sorry, the boots were delivered 45 days ago and our return window is 30 days from delivery, so this order can't be returned."
+      cited_doc_ids: [returns-policy]
+      actions: []
+      escalated: false
+expect:
+  required_tools: [request_return]
+  forbidden_actions: [return_created]
+  tool_outcomes: {request_return: "ineligible:outside_window"}
+  returns_created: 0
+  must_cite: [returns-policy]
+  reply_contains_any: ["30 days", "30-day"]
+  fallback: none

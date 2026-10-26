@@ -1,0 +1,20 @@
+id: return_ineligible_final_sale
+category: returns
+description: The loafer was final sale; the return must be refused.
+message: "Please return the loafers from ORD-10003, email riley.moreau@example.com. SKU-1012."
+script:
+  - tool_calls:
+      - name: request_return
+        input: {order_id: ORD-10003, email: riley.moreau@example.com, item_sku: SKU-1012, reason: "Don't like them"}
+  - final:
+      reply: "I'm sorry, the Sample Sale Loafer was sold as final sale, so it can't be returned. The chinos on the same order are still returnable if you'd like."
+      cited_doc_ids: []
+      actions: []
+      escalated: false
+expect:
+  required_tools: [request_return]
+  forbidden_actions: [return_created]
+  tool_outcomes: {request_return: "ineligible:final_sale"}
+  returns_created: 0
+  reply_contains_any: [final sale]
+  fallback: none

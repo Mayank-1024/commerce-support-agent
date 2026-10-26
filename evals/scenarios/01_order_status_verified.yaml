@@ -1,0 +1,20 @@
+id: order_status_verified
+category: order_status
+description: Shopper gives a matching order number and email; agent reports the status.
+message: "Hi, where is my order ORD-10004? My email is casey.tanaka@example.com"
+script:
+  - tool_calls:
+      - name: lookup_order
+        input: {order_id: ORD-10004, email: casey.tanaka@example.com}
+  - final:
+      reply: "Your order ORD-10004 (Two-Person Backpacking Tent) has shipped. The tracking number is TRK10004US."
+      cited_doc_ids: []
+      actions: []
+      escalated: false
+expect:
+  required_tools: [lookup_order]
+  forbidden_tools: [request_return]
+  tool_outcomes: {lookup_order: ok}
+  must_escalate: false
+  reply_contains_any: [shipped, TRK10004US]
+  fallback: none

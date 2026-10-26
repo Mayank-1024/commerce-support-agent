@@ -1,0 +1,35 @@
+# API + Celery worker + Redis. SQLite lives on a shared volume.
+# Without ANTHROPIC_API_KEY the worker uses the offline scripted model.
+x-app: &app
+  build: .
+  environment:
+    REDIS_URL: redis://redis:6379/0
+    DATABASE_URL: sqlite:////data/commerce_agent.db
+    ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    AGENT_MODEL: ${AGENT_MODEL:-claude-haiku-5-5}
+  volumes:
+    - dbdata:/data
+  depends_on:
+    redis:
+      condition: service_healthy
+
+services:
+  redis:
+    image: redis:7-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      retries: 15
+
+  api:
+    <<: *app
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+
+  worker:
+    <<: *app
+    command: celery -A worker.celery_app worker --loglevel=INFO --concurrency=2
+
+volumes:
+  dbdata:

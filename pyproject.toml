@@ -1,0 +1,39 @@
+[project]
+name = "commerce-support-agent"
+version = "0.1.0"
+description = "Customer-service agent for a synthetic online store: Claude tool use, deterministic business rules, guardrails, async workers and an offline eval suite."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic>=2.0",
+    "celery[redis]>=5.4",
+    "fastapi>=0.115",
+    "pydantic>=2.8",
+    "pyyaml>=6.0",
+    "redis>=5.0",
+    "sqlalchemy>=2.0",
+    "uvicorn>=0.30",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.27",
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]

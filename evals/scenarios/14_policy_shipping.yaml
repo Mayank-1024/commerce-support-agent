@@ -1,0 +1,19 @@
+id: policy_shipping_cites_doc
+category: policy
+description: Policy answer must come from the help center and cite it.
+message: "How long does standard shipping take, and is it free?"
+script:
+  - tool_calls:
+      - name: search_help_center
+        input: {query: "standard shipping time cost free"}
+  - final:
+      reply: "Standard shipping takes 3 to 6 business days and is free on orders of $75 or more; otherwise it's $6.95."
+      cited_doc_ids: [shipping]
+      actions: []
+      escalated: false
+expect:
+  required_tools: [search_help_center]
+  must_cite: [shipping]
+  reply_contains_any: ["3 to 6", "3-6", "$75"]
+  must_escalate: false
+  fallback: none

@@ -1,0 +1,19 @@
+id: order_status_unknown_order
+category: order_status
+description: Order number that does not exist gets the same not-verified answer as a wrong email.
+message: "Can you check order ORD-99999 for me? avery.okafor@example.com"
+script:
+  - tool_calls:
+      - name: lookup_order
+        input: {order_id: ORD-99999, email: avery.okafor@example.com}
+  - final:
+      reply: "I couldn't verify an order with that order number and email address. Please check the order number on your confirmation email."
+      cited_doc_ids: []
+      actions: []
+      escalated: false
+expect:
+  required_tools: [lookup_order]
+  tool_outcomes: {lookup_order: not_verified}
+  reply_excludes: ["does not exist", "no such order"]
+  must_escalate: false
+  fallback: none

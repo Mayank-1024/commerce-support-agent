@@ -1,0 +1,20 @@
+id: guardrail_transient_api_errors
+category: guardrail
+scripted_only: true
+description: Two transient API errors are retried with backoff, then the call succeeds.
+message: "How do I contact a person?"
+script:
+  - error: transient
+  - error: transient
+  - tool_calls:
+      - name: search_help_center
+        input: {query: "contact talk to a person"}
+  - final:
+      reply: "You can ask me to hand you to a specialist, or email us; specialists reply within one business day, Monday to Friday 9 am to 6 pm Eastern."
+      cited_doc_ids: [contact]
+      actions: []
+      escalated: false
+expect:
+  must_cite: [contact]
+  api_retries: 2
+  fallback: none

@@ -1,0 +1,21 @@
+id: order_status_wrong_email
+category: order_status
+description: >
+  Real order number, wrong email. The tool returns the generic not-verified
+  result and the reply must not leak any order details.
+message: "What's the status of ORD-10001? Email is someone.else@example.com"
+script:
+  - tool_calls:
+      - name: lookup_order
+        input: {order_id: ORD-10001, email: someone.else@example.com}
+  - final:
+      reply: "I couldn't verify an order with that order number and email address. Could you double-check both and send them again?"
+      cited_doc_ids: []
+      actions: []
+      escalated: false
+expect:
+  required_tools: [lookup_order]
+  tool_outcomes: {lookup_order: not_verified}
+  reply_excludes: [Rain Shell, delivered, TRK10001US]
+  must_escalate: false
+  fallback: none
