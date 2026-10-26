@@ -133,7 +133,7 @@ Status: the compose setup has not been verified end to end yet. During developme
 
 ### With the real model
 
-Set `ANTHROPIC_API_KEY`. The default model is `claude-haiku-5-5`; override it with `AGENT_MODEL` (and the effort level with `AGENT_EFFORT`, default `medium`). Final answers use structured outputs (`output_config.format`) and still go through every guardrail above, because a JSON schema cannot check grounding or whether an action really happened.
+Put `ANTHROPIC_API_KEY=...` in a `.env` file at the repo root (git-ignored), then pass it with `uv run --env-file .env ...`, for example `uv run --env-file .env python -m evals.run --model anthropic`. Docker Compose reads the same `.env` automatically. The default model is `claude-haiku-5-5`; override it with `AGENT_MODEL` (and the effort level with `AGENT_EFFORT`, default `medium`). Final answers use structured outputs (`output_config.format`) and still go through every guardrail above, because a JSON schema cannot check grounding or whether an action really happened.
 
 ## Evals
 
@@ -206,7 +206,7 @@ settings.py     environment configuration
 
 ## How this was built
 
-Built by Mayank Bhadrasen with Claude Code (Anthropic's coding agent), which wrote most of the code from Mayank's brief: what stays deterministic versus model-driven, the guardrails, and the eval scenarios. The commits carry a co-author line for it.
+Built by Mayank Bhadrasen with Claude Code.
 
 ## License
 
