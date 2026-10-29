@@ -1,0 +1,28 @@
+id: guardrail_false_handoff
+category: guardrail
+scripted_only: true
+description: >
+  Regression for the first real-model eval (2026-10-28): the model tells the shopper it
+  passed a billing dispute to a person without calling escalate_to_human. The handoff-claim
+  check rejects it, and on retry the model escalates for real.
+message: "There's a charge on my card I don't recognize and I want to dispute it. I need a real person."
+script:
+  - final:
+      reply: "I've passed this to a support specialist, who will follow up by email within one business day. Chat agents can't view or change payment details."
+      cited_doc_ids: []
+      actions: []
+      escalated: false
+  - tool_calls:
+      - name: escalate_to_human
+        input: {reason: "billing dispute", summary: "Shopper reports an unrecognized card charge and asks for a person."}
+  - final:
+      reply: "I've passed this to a support specialist (ESC-00001), who will follow up by email within one business day. Chat agents can't view or change payment details."
+      cited_doc_ids: []
+      actions: ["escalation_created:ESC-00001"]
+      escalated: true
+expect:
+  required_tools: [escalate_to_human]
+  must_escalate: true
+  escalations_created: 1
+  output_retries: 1
+  fallback: none
